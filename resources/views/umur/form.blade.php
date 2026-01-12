@@ -12,12 +12,32 @@
 
 
 
-    <div class="container">
+    <div class="container mt-4">
         <div class="card">
             <div class="card-body">
                 <h1>Selamat Datang!</h1>
                 <p>Silakan masukan umur anda dibawah.</p>
             </div>
+        </div>
+        <div class="card mt-2">
+          <div class="card-body">
+            <form action="" method="post">
+              @csrf
+
+              <div class="form-group mt-2">
+                <label for="">Nama Lengkap</label>
+                <input type="text" name="nama" class="form-control">
+              </div>
+
+               <div class="form-group mt-2">
+                <label for="">Umur</label>
+                <input type="number" name="umur" class="form-control">
+              </div>
+
+              <button type="submit" class="btn btn-success mt-2">Masuk</button>
+
+            </form>
+          </div>
         </div>
     </div>
 
