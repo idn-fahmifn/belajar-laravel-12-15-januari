@@ -20,23 +20,31 @@
             </div>
         </div>
         <div class="card mt-2">
-          <div class="card-body">
-            <form action="{{ route('proses.umur') }}" method="post">
-              @csrf
+            <div class="card-body">
 
-              <div class="form-group mt-2">
-                <label for="">Nama Lengkap</label>
-                <input type="text" name="nama" class="form-control">
-              </div>
+              @if (session('failed'))
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Gagal!</strong> {{ session('failed') }}.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              @endif
 
-               <div class="form-group mt-2">
-                <label for="">Umur</label>
-                <input type="number" name="umur" class="form-control">
-              </div>
-              <button type="submit" class="btn btn-success mt-2">Masuk</button>
+                <form action="{{ route('proses.umur') }}" method="post">
+                    @csrf
 
-            </form>
-          </div>
+                    <div class="form-group mt-2">
+                        <label for="">Nama Lengkap</label>
+                        <input type="text" name="nama" class="form-control">
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <label for="">Umur</label>
+                        <input type="number" name="umur" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success mt-2">Masuk</button>
+
+                </form>
+            </div>
         </div>
     </div>
 

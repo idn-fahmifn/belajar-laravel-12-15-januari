@@ -15,7 +15,7 @@
 
         @csrf
 
-        <input type="text" name="contoh">
+        <input type="number" name="contoh">
         <button type="submit">test</button>
 
     </form>

@@ -22,6 +22,12 @@ class HalamanController extends Controller
 
     public function kirim(Request $request)
     {
+
+        
+        $request->validate([
+            'contoh' => ['integer', 'required', 'min:1', 'max:100']
+        ]);
+
         // data apa saja yang dimasukan oleh user? 
         return $request;
     }
