@@ -15,6 +15,14 @@ class UmurMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+
+        $data = $request->session()->get('age'); //nilai umur
+
+        if($data >= 18) {
+            return $next($request);
+        }
+        // jika umurnya kurang dari 18 tahun
+        return redirect()->route('form.umur')->with('failed', 'Umur kamu belum memenuhi');
+
     }
 }

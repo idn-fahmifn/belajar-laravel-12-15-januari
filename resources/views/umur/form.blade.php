@@ -21,7 +21,7 @@
         </div>
         <div class="card mt-2">
           <div class="card-body">
-            <form action="" method="post">
+            <form action="{{ route('proses.umur') }}" method="post">
               @csrf
 
               <div class="form-group mt-2">
@@ -33,7 +33,6 @@
                 <label for="">Umur</label>
                 <input type="number" name="umur" class="form-control">
               </div>
-
               <button type="submit" class="btn btn-success mt-2">Masuk</button>
 
             </form>

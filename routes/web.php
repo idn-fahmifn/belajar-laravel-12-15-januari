@@ -50,6 +50,10 @@ Route::resource('barang', BarangController::class);
 
 // routing untuk umur
 Route::get('form-umur', [UmurController::class, 'formUmur'])->name('form.umur');
+Route::post('umur', [UmurController::class, 'proses'])->name('proses.umur');
+Route::get('sukses', [UmurController::class, 'sukses'])
+->middleware('umur')
+->name('sukses.umur');
 
 
 
