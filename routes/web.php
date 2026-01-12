@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\BarangController;
 use App\Http\Controllers\HalamanController;
+use App\Http\Controllers\UmurController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -40,6 +42,14 @@ Route::get('/motor/{param?}', function($nilai = 'honda'){
     $ucapan = "Hallo saya punya sebuah motor ";
     return  $ucapan . $nilai;
 })->name('halaman.motor');
+
+
+// cara menjalankan routing dengan controller resource : 
+Route::resource('barang', BarangController::class);
+
+
+// routing untuk umur
+Route::get('form-umur', [UmurController::class, 'formUmur'])->name('form.umur');
 
 
 
