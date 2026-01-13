@@ -33,7 +33,7 @@
                                     <td>{{ $item->nama_barang }}</td>
                                     <td>{{ $item->brand }}</td>
                                     <td>
-                                        <a href="#" class="btn btn-outline-success">Detail</a>
+                                        <a href="{{ route('barang.show', $item->id) }}" class="btn btn-outline-success">Detail</a>
                                     </td>
                                 </tr>
                             @empty

@@ -37,9 +37,10 @@ class BarangController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        return "halaman detail";
+        $data = Barang::findOrFail($id);
+        return view('halaman.detail-barang', compact('data'));
         
     }
 

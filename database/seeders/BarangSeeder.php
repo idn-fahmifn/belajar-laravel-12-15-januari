@@ -24,7 +24,7 @@ class BarangSeeder extends Seeder
         //     'deskripsi' => 'Laptop gaming murah keluaran terbaru',
         // ]);
 
-        Item::factory()->count(100)->create();
+        Barang::factory()->count(100)->create();
 
     }
 }
