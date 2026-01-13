@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Barang;
+use App\Models\Item;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -23,7 +24,7 @@ class BarangSeeder extends Seeder
         //     'deskripsi' => 'Laptop gaming murah keluaran terbaru',
         // ]);
 
-        Barang::factory()->count(100)->create();
+        Item::factory()->count(100)->create();
 
     }
 }
